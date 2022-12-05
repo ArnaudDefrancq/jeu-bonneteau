@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'font01';
+    src: url(./font/Roboto-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #75a094;
+    font-family: 'font01', sans-serif;
+ 
+}
+
+#section {  
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 4em;
+    color: whitesmoke;
+    font-weight: 100;
+    margin-top: 3%;
+}
+
+.rules {
+    position: absolute;
+    top: 10%;
+    left: 5%;    
+}
+
+.rules h2 {
+    font-size: 2em;
+}
+
+.rules p {
+    margin-top: 3%;
+    font-size: 1.2em;
+}
+
+.container {
+    margin: 8% auto;
+    display: flex;
+    width: 50%;
+
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 70%;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 20px;
+}
+ 
+.card:hover {
+    transform: scale(1.1); 
+} 
+
+.rotate-verso {
+    animation: rotateVerso 1s forwards;
+    pointer-events: none;
+}
+
+@keyframes rotateVerso {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(90deg);
+    }
+
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+.win {
+    color: green;
+}
+.lose {
+    color: red;
+}
+
+.score {
+    background-color: #ffffffe3;
+    text-align: center;
+    font-size: 3em;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    transition: 1s;
+}
+
+#reset {
+    cursor: pointer;
+    width: 30%;
+    font-size: 2em;
+    padding: 1% 0;
+    border-radius: 15px;
+    margin: 0 auto;
+    transition: 0.3s ease;
+}
+
+#reset:hover {
+    background-color: transparent;
+}
