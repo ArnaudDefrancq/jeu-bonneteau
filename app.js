@@ -51,7 +51,7 @@ allCard.forEach((e) => {
     setTimeout(() => {
       const value = e.alt;
       if (game.win === value) {
-        score.innerHTML = "Gagner";
+        score.innerHTML = "Gagné";
         score.classList.add("win");
       } else {
         score.innerHTML = "Perdu";
